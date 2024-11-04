@@ -18,6 +18,7 @@ export default function Home() {
 
     fetchNoticias();
   }, []);
+  console.log(noticias);
 
   return (
     <main className="min-h-screen bg-gradient-to-br from-blue-50 via-blue-100 to-purple-50 py-10">
