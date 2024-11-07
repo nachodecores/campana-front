@@ -26,36 +26,43 @@ export default function Home() {
       relevancia: "baja",
     },
     {
-      id: 4,
-      titulo: "Noticia Pequeña 2",
-      descripcion: "Otra noticia de baja relevancia",
+      id: 7,
+      titulo: "Noticia Pequeña",
+      descripcion: "Descripción de noticia pequeña",
       relevancia: "baja",
     },
-    // Agrega más noticias según sea necesario
+    {
+      id: 4,
+      titulo: "Noticia Relevante",
+      descripcion: "Descripción de noticia relevante",
+      relevancia: "alta",
+    },
+    {
+      id: 5,
+      titulo: "Noticia Mediana",
+      descripcion: "Descripción de noticia mediana",
+      relevancia: "media",
+    },
+    {
+      id: 6,
+      titulo: "Noticia Pequeña",
+      descripcion: "Descripción de noticia pequeña",
+      relevancia: "baja",
+    },
+    // Agrega más noticias aquí
   ]);
 
   return (
-    <main className="min-h-screen bg-gradient-to-br from-blue-50 via-blue-100 to-purple-50 py-10">
+    <main className="min-h-screen custom-gradient py-10">
       <Header />
 
-      <section
-        className="grid gap-4 max-w-6xl mx-auto p-4"
-        style={{
-          gridTemplateColumns: "repeat(4, 1fr)",
-          gridTemplateRows: "auto",
-          gridTemplateAreas: `
-            "alta alta media media"
-            "alta alta baja1 baja2"
-          `,
-        }}
-      >
-        {noticias.map((noticia, index) => (
+      <section className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-6xl mx-auto p-4">
+        {noticias.map((noticia) => (
           <NewsCard
             key={noticia.id}
             titulo={noticia.titulo}
             descripcion={noticia.descripcion}
             relevancia={noticia.relevancia}
-            area={`baja${index}`}
           />
         ))}
       </section>
