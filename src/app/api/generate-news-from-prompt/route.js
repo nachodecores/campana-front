@@ -1,55 +1,76 @@
-// src/app/api/generate-news-from-prompt/route.js
 import { supabase } from "../../../supabaseClient";
 
 export async function POST(req) {
   const { prompt } = await req.json();
 
   if (!prompt) {
+    console.error("No prompt provided");
     return new Response(JSON.stringify({ error: "Prompt is required" }), {
       status: 400,
     });
   }
 
   const generatedNoticias = [];
+
   for (let i = 1; i <= 5; i++) {
-    const openaiResponse = await fetch(
-      "https://api.openai.com/v1/completions",
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${process.env.OPENAI_API_KEY}`,
-        },
-        body: JSON.stringify({
-          model: "text-davinci-003",
-          prompt: `Genera una noticia breve con el título y descripción sobre el tema: "${prompt}". Noticia ${i} de 5.`,
-          max_tokens: 150,
-        }),
+    try {
+      const openaiResponse = await fetch(
+        "https://api.openai.com/v1/chat/completions",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${process.env.OPENAI_API_KEY}`,
+          },
+          body: JSON.stringify({
+            model: "gpt-3.5-turbo",
+            messages: [
+              {
+                role: "system",
+                content: "You are a helpful assistant generating news content.",
+              },
+              {
+                role: "user",
+                content: `Genera una noticia breve con el título y descripción sobre el tema: "${prompt}". Noticia ${i} de 5.`,
+              },
+            ],
+            max_tokens: 150,
+          }),
+        }
+      );
+
+      const openaiData = await openaiResponse.json();
+
+      if (!openaiData.choices || !openaiData.choices[0].message.content) {
+        console.error("Error en la respuesta de OpenAI:", openaiData);
+        return new Response(
+          JSON.stringify({ error: "Failed to generate content from OpenAI." }),
+          { status: 500 }
+        );
       }
-    );
 
-    const openaiData = await openaiResponse.json();
-    const descripcion = openaiData.choices?.[0]?.text?.trim();
-    const titulo = `Noticia ${i} sobre ${prompt}`;
+      const descripcion = openaiData.choices[0].message.content.trim();
+      const titulo = `Noticia ${i} sobre ${prompt}`;
 
-    if (descripcion) {
       const { data, error } = await supabase
         .from("noticias")
         .insert([{ titulo, descripcion, enlace: "#" }])
         .single();
 
       if (error) {
+        console.error("Error al guardar en la base de datos:", error);
         return new Response(
           JSON.stringify({ error: "Failed to save news to database." }),
           { status: 500 }
         );
       }
+
       generatedNoticias.push(data);
-    } else {
-      return new Response(
-        JSON.stringify({ error: "Failed to generate content." }),
-        { status: 500 }
-      );
+    } catch (err) {
+      console.error("Error en la generación de noticias:", err);
+      return new Response(JSON.stringify({ error: "Error generating news" }), {
+        status: 500,
+      });
     }
   }
 
