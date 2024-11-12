@@ -26,17 +26,14 @@ body {
 
 @font-face {
   font-family: "LexendExa";
-  src: url("/src/app/fonts/LexendExa-VariableFont_wght.ttf") format("truetype"),
-    url("/src/app/fonts/LexendExa-VariableFont_wght.ttf") format("truetype");
+  src: url("/fonts/LexendExa-VariableFont_wght.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "MiriamLibre";
-  src: url("/src/app/fonts/MiriamLibre-VariableFont_wght.ttf")
-      format("truetype"),
-    url("/src/app/fonts/MiriamLibre-VariableFont_wght.ttf") format("truetype");
+  src: url("/fonts/MiriamLibre-VariableFont_wght.ttf") format("truetype");
   font-weight: bold;
   font-style: normal;
 }
