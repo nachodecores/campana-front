@@ -12,8 +12,11 @@ module.exports = {
         foreground: "var(--foreground)",
       },
       fontFamily: {
-        custom: ["LexendExa-VariableFont_wght", "sans-serif"],
-        customBold: ["MiriamLibre-VariableFont_wght", "sans-serif"],
+        custom: ["LexendExa", "sans-serif"],
+        customBold: ["MiriamLibre", "sans-serif"],
+      },
+      letterSpacing: {
+        wide40: "0.4em", // Esto representa un espaciado del 40%
       },
     },
   },
