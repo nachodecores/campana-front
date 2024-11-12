@@ -31,11 +31,14 @@ export default function Header() {
             />
           </div>
         ) : (
-          <h1
-            className={`text-4xl font-bold transition-opacity duration-500 ease-in-out opacity-100 font-customBold tracking-wide40`}
-          >
-            <span className="">todas</span> las campanas en una
-          </h1>
+          <div className="">
+            <h2
+              className={`font-bold transition-opacity duration-500 ease-in-out opacity-100 font-customBold tracking-wide40`}
+            >
+              <span className="">todas</span> las campanas en una
+            </h2>
+            <h1 className="text-4xl font-custom tracking-wide40">CAMPANA</h1>
+          </div>
         )}
       </div>
     </header>
