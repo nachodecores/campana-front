@@ -11,6 +11,10 @@ module.exports = {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      fontFamily: {
+        custom: ["LexendExa-VariableFont_wght", "sans-serif"],
+        customBold: ["MiriamLibre-VariableFont_wght", "sans-serif"],
+      },
     },
   },
   plugins: [],

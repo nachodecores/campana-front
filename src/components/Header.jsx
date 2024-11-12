@@ -32,9 +32,9 @@ export default function Header() {
           </div>
         ) : (
           <h1
-            className={`text-4xl font-bold transition-opacity duration-500 ease-in-out opacity-100`}
+            className={`text-4xl font-bold transition-opacity duration-500 ease-in-out opacity-100 font-custom`}
           >
-            C A M P A N A
+            todas las campanas en una
           </h1>
         )}
       </div>

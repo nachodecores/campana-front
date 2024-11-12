@@ -23,3 +23,19 @@ body {
 .custom-gradient {
   background: linear-gradient(135deg, #e2e2e2, #e7e6d7);
 }
+
+@font-face {
+  font-family: "LexendExa-VariableFont_wght";
+  src: url("/src/app/fonts/LexendExa-VariableFont_wght.ttf") format("ttf"),
+    url("/src/app/fonts/LexendExa-VariableFont_wght.ttf") format("ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "MiriamLibre-VariableFont_wght";
+  src: url("/src/app/fonts/MiriamLibre-VariableFont_wght.ttf") format("ttf"),
+    url("/src/app/fonts/MiriamLibre-VariableFont_wght.ttf") format("ttf");
+  font-weight: bold;
+  font-style: normal;
+}
