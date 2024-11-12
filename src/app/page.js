@@ -1,56 +1,28 @@
 "use client";
 
+import { supabase } from "../supabaseClient";
 import React, { useEffect, useState } from "react";
 import Header from "../components/Header.jsx";
 import NewsCard from "../components/NewsCard.jsx";
 import Footer from "../components/Footer.jsx";
 
 export default function Home() {
-  const [noticias, setNoticias] = useState([
-    {
-      id: 1,
-      titulo: "Noticia Relevante",
-      descripcion: "Descripción de noticia relevante",
-      relevancia: "alta",
-    },
-    {
-      id: 2,
-      titulo: "Noticia Mediana",
-      descripcion: "Descripción de noticia mediana",
-      relevancia: "media",
-    },
-    {
-      id: 3,
-      titulo: "Noticia Pequeña",
-      descripcion: "Descripción de noticia pequeña",
-      relevancia: "baja",
-    },
-    {
-      id: 7,
-      titulo: "Noticia Pequeña",
-      descripcion: "Descripción de noticia pequeña",
-      relevancia: "baja",
-    },
-    {
-      id: 4,
-      titulo: "Noticia Relevante",
-      descripcion: "Descripción de noticia relevante",
-      relevancia: "alta",
-    },
-    {
-      id: 5,
-      titulo: "Noticia Mediana",
-      descripcion: "Descripción de noticia mediana",
-      relevancia: "media",
-    },
-    {
-      id: 6,
-      titulo: "Noticia Pequeña",
-      descripcion: "Descripción de noticia pequeña",
-      relevancia: "baja",
-    },
-    // Agrega más noticias aquí
-  ]);
+  const [noticias, setNoticias] = useState([]);
+
+  useEffect(() => {
+    // Función para cargar las noticias desde la base de datos
+    const fetchNoticias = async () => {
+      const { data, error } = await supabase.from("noticias").select("*"); // Puedes especificar columnas si deseas filtrar los datos
+
+      if (error) {
+        console.error("Error al cargar noticias:", error);
+      } else {
+        setNoticias(data); // Almacena las noticias en el estado
+      }
+    };
+
+    fetchNoticias(); // Llama a la función al montar el componente
+  }, []);
 
   return (
     <main className="min-h-screen custom-gradient py-10">
