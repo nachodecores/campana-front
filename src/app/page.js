@@ -5,7 +5,7 @@ import React, { useEffect, useState } from "react";
 import Header from "../components/Header.jsx";
 import NewsCard from "../components/NewsCard.jsx";
 import Footer from "../components/Footer.jsx";
-import Subscription from "@/components/Subscriptions";
+import Subscription from "@/components/Subscription";
 
 export default function Home() {
   const [noticias, setNoticias] = useState([]);
@@ -39,7 +39,6 @@ export default function Home() {
           />
         ))}
       </section>
-      <Subscription />
       <Footer />
     </main>
   );
