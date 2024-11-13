@@ -40,6 +40,11 @@ export default function Header() {
             <h1 className="text-4xl font-custom tracking-wide40">CAMPANA</h1>
           </div>
         )}
+        <div
+          className={`transition-opacity ease-in-out opacity-100 ml-0 md:ml-4 flex items-end`}
+        >
+          <img src="/user_logo.svg" alt="Logo" className="h-10 w-10" />
+        </div>
       </div>
     </header>
   );
