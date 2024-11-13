@@ -5,6 +5,7 @@ import React, { useEffect, useState } from "react";
 import Header from "../components/Header.jsx";
 import NewsCard from "../components/NewsCard.jsx";
 import Footer from "../components/Footer.jsx";
+import Subscription from "@/components/Subscriptions";
 
 export default function Home() {
   const [noticias, setNoticias] = useState([]);
@@ -12,7 +13,7 @@ export default function Home() {
   useEffect(() => {
     // Función para cargar las noticias desde la base de datos
     const fetchNoticias = async () => {
-      const { data, error } = await supabase.from("noticias").select("*"); // Puedes especificar columnas si deseas filtrar los datos
+      const { data, error } = await supabase.from("news").select("*"); // Puedes especificar columnas si deseas filtrar los datos
 
       if (error) {
         console.error("Error al cargar noticias:", error);
@@ -38,7 +39,7 @@ export default function Home() {
           />
         ))}
       </section>
-
+      <Subscription />
       <Footer />
     </main>
   );
