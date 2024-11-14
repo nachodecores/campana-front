@@ -15,6 +15,10 @@ module.exports = {
         custom: ["LexendExa", "sans-serif"],
         customBold: ["MiriamLibre", "sans-serif"],
       },
+      fontWeight: {
+        normal: 100,
+        bold: 900,
+      },
       letterSpacing: {
         wide40: "0.4em", // Esto representa un espaciado del 40%
       },

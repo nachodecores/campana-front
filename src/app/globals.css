@@ -34,6 +34,6 @@ body {
 @font-face {
   font-family: "MiriamLibre";
   src: url("/fonts/MiriamLibre-VariableFont_wght.ttf") format("truetype");
-  font-weight: bold;
+  font-weight: 100 900;
   font-style: normal;
 }
