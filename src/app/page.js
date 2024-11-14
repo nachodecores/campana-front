@@ -32,6 +32,7 @@ export default function Home() {
         {noticias.map((noticia) => (
           <NewsCard
             key={noticia.id}
+            id={noticia.id} // Pasa el ID aquí
             titulo={noticia.titulo}
             descripcion={noticia.descripcion}
             relevancia={noticia.relevancia}

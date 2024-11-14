@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Subscription from "./Subscription";
 import UserForm from "./UserForm";
+import CloseButton from "./CloseButton";
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -52,12 +53,7 @@ export default function Header() {
             className="relative bg-white p-6 rounded-lg shadow-lg max-w-md mx-auto"
             onClick={(e) => e.stopPropagation()} // Evita que el clic dentro del modal cierre el modal
           >
-            <button
-              className="absolute top-2 right-2 text-gray-500 hover:text-gray-700"
-              onClick={() => setShowSubscriptionModal(false)}
-            >
-              &times;
-            </button>
+            <CloseButton />
             <Subscription />
             <UserForm />
           </div>
