@@ -34,7 +34,7 @@ export default function Home() {
             key={noticia.id}
             id={noticia.id} // Pasa el ID aquí
             titulo={noticia.titulo}
-            descripcion={noticia.descripcion}
+            version_corta={noticia.version_corta}
             relevancia={noticia.relevancia}
           />
         ))}

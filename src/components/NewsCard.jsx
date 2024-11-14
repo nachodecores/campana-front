@@ -1,7 +1,7 @@
 import React from "react";
 import { useRouter } from "next/navigation";
 
-export default function NewsCard({ id, titulo, descripcion, relevancia }) {
+export default function NewsCard({ id, titulo, version_corta, relevancia }) {
   const router = useRouter();
 
   // Ajuste de clases de tamaño según la relevancia
@@ -21,7 +21,7 @@ export default function NewsCard({ id, titulo, descripcion, relevancia }) {
         {titulo}
       </h2>
       <p className="text-gray-600 overflow-hidden whitespace-nowrap text-ellipsis">
-        {descripcion}
+        {version_corta}
       </p>
     </div>
   );

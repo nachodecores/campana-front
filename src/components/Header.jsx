@@ -17,7 +17,7 @@ export default function Header() {
 
   return (
     <header className="fixed top-0 left-0 w-full transition-all duration-500 ease-in-out z-50">
-      <div className="flex items-center justify-center max-w-6xl mx-auto py-4 px-6">
+      <div className="flex items-center justify-between max-w-6xl mx-auto py-4 px-6">
         {isScrolled ? (
           <div className="transition-opacity ease-in-out opacity-100 ml-0 md:ml-4 flex items-start">
             <img

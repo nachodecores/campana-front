@@ -49,12 +49,12 @@ export async function POST(req) {
         );
       }
 
-      const descripcion = openaiData.choices[0].message.content.trim();
+      const version_corta = openaiData.choices[0].message.content.trim();
       const titulo = `Noticia ${i} sobre ${prompt}`;
 
       const { data, error } = await supabase
         .from("noticias")
-        .insert([{ titulo, descripcion, enlace: "#" }])
+        .insert([{ titulo, version_corta, enlace: "#" }])
         .single();
 
       if (error) {
