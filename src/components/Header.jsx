@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Subscription from "./Subscription";
+import UserForm from "./UserForm";
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -21,7 +22,7 @@ export default function Header() {
             <img
               src="/logo-campana-oscuro.svg"
               alt="Logo"
-              className="h-20 w-20"
+              className="h-14 w-14"
             />
           </div>
         ) : (
@@ -58,6 +59,7 @@ export default function Header() {
               &times;
             </button>
             <Subscription />
+            <UserForm />
           </div>
         </div>
       )}
