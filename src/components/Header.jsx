@@ -31,11 +31,7 @@ export default function Header() {
             isScrolled ? "h-10 w-10" : "h-14 w-14"
           }`}
         />
-        <div
-          className={`ml-4 transition-opacity ${
-            isScrolled ? "opacity-0" : "opacity-100"
-          }`}
-        >
+        <div className={`ml-4 transition-opacity `}>
           {isScrolled ? (
             <h1 className="text-colorWhite1 text-4xl font-custom tracking-wide40">
               CAMPANA
