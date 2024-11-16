@@ -16,28 +16,40 @@ export default function Header() {
   }, []);
 
   return (
-    <header className="fixed top-0 left-0 w-full transition-all duration-500 ease-in-out z-50">
-      <div className="flex items-center justify-between max-w-6xl mx-auto py-4 px-6">
-        {isScrolled ? (
-          <div className="transition-opacity ease-in-out opacity-100 ml-0 md:ml-4 flex items-start">
-            <img
-              src="/logo-campana-oscuro.svg"
-              alt="Logo"
-              className="h-14 w-14"
-            />
-          </div>
-        ) : (
-          <div className="">
-            <h2 className="transition-opacity duration-500 ease-in-out opacity-100 font-customBold tracking-wide40">
+    <header
+      className={`fixed top-0 left-0 w-full transition-all duration-500 ease-in-out z-50 ${
+        isScrolled ? "py-2 bg-colorBlue1 shadow-md" : "py-6 bg-transparent"
+      }`}
+    >
+      <div className="flex items-center justify-between max-w-6xl mx-auto px-6">
+        <img
+          src={
+            isScrolled ? "logo_campana_claro.svg" : "/logo_campana_oscuro.svg"
+          }
+          alt="Logo"
+          className={`transition-all duration-500 ${
+            isScrolled ? "h-10 w-10" : "h-14 w-14"
+          }`}
+        />
+        <div
+          className={`ml-4 transition-opacity ${
+            isScrolled ? "opacity-0" : "opacity-100"
+          }`}
+        >
+          {isScrolled ? (
+            <h1 className="text-colorWhite1 text-4xl font-custom tracking-wide40">
+              CAMPANA
+            </h1>
+          ) : (
+            <h2 className="font-customBold tracking-wide40">
               <span className="font-bold">todas</span> las campanas en{" "}
               <span className="font-bold">una</span>
             </h2>
-            <h1 className="text-4xl font-custom tracking-wide40">CAMPANA</h1>
-          </div>
-        )}
-        <div className="transition-opacity ease-in-out opacity-100 ml-0 md:ml-4 flex items-end">
+          )}
+        </div>
+        <div className="flex items-end">
           <img
-            src="/user_logo.svg"
+            src={isScrolled ? "/user_logo_claro.svg" : "/user_logo.svg"}
             alt="User Icon"
             className="h-10 w-10 cursor-pointer"
             onClick={() => setShowSubscriptionModal(true)}
@@ -48,13 +60,13 @@ export default function Header() {
       {showSubscriptionModal && (
         <div
           className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50"
-          onClick={() => setShowSubscriptionModal(false)} // Cierra el modal al hacer clic en el fondo
+          onClick={() => setShowSubscriptionModal(false)}
         >
           <div
             className="relative bg-white p-6 rounded-lg shadow-lg max-w-md mx-auto"
-            onClick={(e) => e.stopPropagation()} // Evita que el clic dentro del modal cierre el modal
+            onClick={(e) => e.stopPropagation()}
           >
-            <CloseButton />
+            <CloseButton onClose={() => setShowSubscriptionModal(false)} />
             <Subscription />
             <UserForm />
           </div>

@@ -10,6 +10,8 @@ module.exports = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        colorBlue1: "#292839",
+        colorWhite1: "#E7E6D7",
       },
       fontFamily: {
         custom: ["LexendExa", "sans-serif"],
