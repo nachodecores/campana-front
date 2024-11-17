@@ -1,13 +1,42 @@
-// src/components/Subscription.js
 import React, { useState } from "react";
+import { supabase } from "../supabaseClient"; // Asegúrate de que la ruta sea correcta
 
 export default function Subscription() {
   const [plan, setPlan] = useState("monthly"); // Plan por defecto (mensual)
+  const [name, setName] = useState(""); // Nombre del usuario
+  const [email, setEmail] = useState(""); // Email del usuario
 
-  const handleSubscribe = () => {
-    // Redirige al usuario al proceso de pago o suscripción
-    // Aquí puedes iniciar el flujo de pago con Stripe u otra lógica
-    alert(`Suscribirse al plan ${plan}`);
+  const handleSubscribe = async () => {
+    if (!name || !email) {
+      alert("Por favor, completa todos los campos.");
+      return;
+    }
+
+    try {
+      const { data, error } = await supabase.from("subscriptions").insert([
+        {
+          name,
+          email,
+          subscription_type: plan === "monthly" ? "mensual" : "anual",
+        },
+      ]);
+
+      if (error) {
+        console.error("Error al suscribirse:", error.message);
+        alert("Error al procesar la suscripción.");
+      } else {
+        alert(
+          `Gracias, ${name}. Te has suscrito al plan ${
+            plan === "monthly" ? "mensual" : "anual"
+          }`
+        );
+        setName(""); // Limpia el campo nombre
+        setEmail(""); // Limpia el campo email
+      }
+    } catch (err) {
+      console.error("Error inesperado:", err);
+      alert("Error inesperado. Inténtalo nuevamente.");
+    }
   };
 
   return (
@@ -17,6 +46,32 @@ export default function Subscription() {
         Obtén acceso exclusivo a contenido premium con nuestra suscripción.
       </p>
 
+      <div className="mb-4">
+        <label className="block text-sm font-medium text-gray-700 mb-1">
+          Nombre
+        </label>
+        <input
+          type="text"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+          className="w-full px-4 py-2 border rounded-lg"
+          placeholder="Ingresa tu nombre"
+        />
+      </div>
+
+      <div className="mb-4">
+        <label className="block text-sm font-medium text-gray-700 mb-1">
+          Email
+        </label>
+        <input
+          type="email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          className="w-full px-4 py-2 border rounded-lg"
+          placeholder="Ingresa tu email"
+        />
+      </div>
+
       <div className="flex justify-around mb-6">
         <button
           onClick={() => setPlan("monthly")}
@@ -24,7 +79,7 @@ export default function Subscription() {
             plan === "monthly" ? "bg-blue-500 text-white" : "bg-gray-200"
           }`}
         >
-          Mensual - $10
+          Mensual - U$S 1
         </button>
         <button
           onClick={() => setPlan("yearly")}
@@ -32,7 +87,7 @@ export default function Subscription() {
             plan === "yearly" ? "bg-blue-500 text-white" : "bg-gray-200"
           }`}
         >
-          Anual - $100
+          Anual - U$S 10
         </button>
       </div>
 

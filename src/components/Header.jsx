@@ -63,8 +63,8 @@ export default function Header() {
             onClick={(e) => e.stopPropagation()}
           >
             <CloseButton onClose={() => setShowSubscriptionModal(false)} />
+            {/* <UserForm /> */}
             <Subscription />
-            <UserForm />
           </div>
         </div>
       )}
