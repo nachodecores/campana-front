@@ -21,7 +21,9 @@ async function scrapeMontevideo() {
   let articles = [];
   while (articles.length < 25) {
     articles = await page.$$eval("article.noticia a", (links) =>
-      links.map((link) => ({ href: link.href }))
+      links.map((link) => ({
+        href: new URL(link.getAttribute("href"), location.origin).href, // Absolutiza URLs
+      }))
     );
 
     await page.evaluate(() => {
@@ -40,8 +42,12 @@ async function scrapeMontevideo() {
     await page.goto(href, { waitUntil: "networkidle2" });
 
     // Extraer el contenido de las etiquetas <p>
-    const paragraphs = await page.$$eval("p", (nodes) =>
-      nodes.map((node) => node.innerText.trim()).filter((text) => text)
+    const paragraphs = await page.$$eval(
+      "p",
+      (nodes) =>
+        nodes
+          .map((node) => node.innerText.trim()) // Extrae y limpia el texto
+          .filter((text) => text.length > 140) // Filtra párrafos con más de 125 caracteres
     );
 
     newsContent.push({
