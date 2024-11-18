@@ -47,7 +47,7 @@ async function scrapeMontevideo() {
       (nodes) =>
         nodes
           .map((node) => node.innerText.trim()) // Extrae y limpia el texto
-          .filter((text) => text.length > 140) // Filtra párrafos con más de 125 caracteres
+          .filter((text) => text.length > 140) // Filtra párrafos con más de 140 caracteres
     );
 
     newsContent.push({

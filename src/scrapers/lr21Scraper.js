@@ -24,7 +24,6 @@ async function scrapeLR21() {
 
   // Limitar a las primeras 25 noticias
   articles = articles.slice(0, 25);
-  console.log("Artículos encontrados:", articles);
 
   // Extraer contenido de cada enlace
   const newsContent = [];
@@ -32,7 +31,7 @@ async function scrapeLR21() {
     try {
       await page.goto(href, { waitUntil: "networkidle2" });
 
-      // Extraer el contenido de las etiquetas <p> con más de 125 caracteres
+      // Extraer el contenido de las etiquetas <p> con más de 140 caracteres
       const paragraphs = await page.$$eval(
         "p",
         (nodes) =>
