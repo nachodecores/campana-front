@@ -24,6 +24,11 @@ module.exports = {
       letterSpacing: {
         wide40: "0.4em", // Esto representa un espaciado del 40%
       },
+      screens: {
+        sm: "640px", // Pantallas pequeñas: teléfonos
+        md: "768px", // Pantallas medianas: tablets
+        lg: "1024px", // Pantallas grandes: laptops
+      },
     },
   },
   plugins: [],

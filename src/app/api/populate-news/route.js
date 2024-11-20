@@ -7,7 +7,6 @@ export async function POST(req) {
       const { error } = await supabase.from("news").insert([
         {
           titulo: noticia.titulo,
-          relevancia: noticia.relevancia,
           version_corta: noticia.version_corta,
           version_larga: noticia.version_larga,
           categoria: noticia.categoria,
