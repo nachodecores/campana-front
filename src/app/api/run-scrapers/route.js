@@ -1,22 +1,18 @@
 import { NextResponse } from "next/server";
-import scrapeMontevideo from "@/scrapers/montevideoScraper";
-import scrapeLR21 from "@/scrapers/lr21Scraper";
-import scrapeElPais from "@/scrapers/elPaisScraper";
+import runScrapers from "@/scrapers/index"; // Importa el archivo index.js
 
 export async function POST() {
   try {
-    // Ejecutar ambos scrapers
-    console.log("Ejecutando scrapers...");
-    await scrapeMontevideo();
-    await scrapeLR21();
-    // await scrapeElPais();
-    console.log("Scrapers ejecutados correctamente.");
+    console.log("Ejecutando todos los scrapers...");
 
-    return NextResponse.json({ message: "Scrapers ejecutados correctamente." });
+    // Ejecutar el archivo index.js
+    await runScrapers();
+
+    return NextResponse.json({ message: "Scraping completado con éxito" });
   } catch (error) {
     console.error("Error al ejecutar los scrapers:", error);
     return NextResponse.json(
-      { error: "Error al ejecutar los scrapers." },
+      { error: "Error al ejecutar los scrapers" },
       { status: 500 }
     );
   }
