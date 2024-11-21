@@ -13,10 +13,10 @@ async function scrapeElPais() {
   await page.goto("https://www.elpais.com.uy/", { waitUntil: "networkidle2" });
 
   // Esperar a que se carguen los elementos
-  await page.waitForSelector("div.card");
+  await page.waitForSelector("div.PromoBasic");
 
   // Extraer los enlaces dentro de los div con clase "card"
-  let articles = await page.$$eval("div.promoBasic a", (links) =>
+  let articles = await page.$$eval("div.PromoBasic a", (links) =>
     links.map((link) => ({
       href: new URL(link.getAttribute("href"), location.origin).href, // Convierte URLs relativas a absolutas
     }))

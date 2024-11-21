@@ -1,6 +1,6 @@
 const scrapeMontevideo = require("./montevideoScraper");
 const scrapeLR21 = require("./lr21Scraper");
-const scrapeElPais = require("./elpaisScraper");
+const scrapeElPais = require("./elPaisScraper");
 
 async function runScrapers() {
   console.log("Iniciando scrapers...");
