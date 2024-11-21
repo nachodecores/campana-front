@@ -52,7 +52,7 @@ async function scrapeMontevideo() {
 
     newsContent.push({
       url: href,
-      content: paragraphs,
+      content: paragraphs.join(" "), // Une los párrafos en un único string
     });
   }
 

@@ -42,7 +42,7 @@ async function scrapeLR21() {
 
       newsContent.push({
         url: href,
-        content: paragraphs,
+        content: paragraphs.join(" "), // Une los párrafos en un único string
       });
     } catch (error) {
       console.error(`Error al procesar la URL ${href}:`, error.message);

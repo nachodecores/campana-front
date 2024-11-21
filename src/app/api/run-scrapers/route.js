@@ -7,9 +7,9 @@ export async function POST() {
   try {
     // Ejecutar ambos scrapers
     console.log("Ejecutando scrapers...");
-    // await scrapeMontevideo();
-    // await scrapeLR21();
-    await scrapeElPais();
+    await scrapeMontevideo();
+    await scrapeLR21();
+    // await scrapeElPais();
     console.log("Scrapers ejecutados correctamente.");
 
     return NextResponse.json({ message: "Scrapers ejecutados correctamente." });
