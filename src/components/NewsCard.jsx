@@ -1,9 +1,9 @@
 import React from "react";
 import { useRouter } from "next/navigation";
 
-export default function NewsCard({ id, titulo, contenido, styles }) {
+export default function NewsCard({ id, titulo, contenido, categoria, styles }) {
   const router = useRouter();
-
+  console.log(styles.text);
   return (
     <div
       onClick={() => router.push(`/news/${id}`)}
@@ -30,7 +30,7 @@ export default function NewsCard({ id, titulo, contenido, styles }) {
         {styles?.text || "No styles.text found"}
       </p>
       <p className="text-gray-600 overflow-hidden whitespace-nowrap text-ellipsis">
-        {JSON.stringify(styles) || "No styles found"}
+        {categoria}
       </p>
     </div>
   );

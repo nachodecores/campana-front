@@ -45,7 +45,7 @@ const categoryStyles = {
     shadow: "shadow-sm",
   },
   turismo: {
-    text: "text-colorBlue1",
+    text: "text-blue-500",
     background: "bg-blue-100",
     border: "border-blue-500",
     font: "font-light",
