@@ -23,7 +23,7 @@ export default async function NewsDetail({ params }) {
       <CloseButton />
 
       <h1 className="text-3xl font-bold mb-4">{noticia.titulo}</h1>
-      <p className="text-gray-700">{noticia.version_corta}</p>
+      <p className="text-gray-700">{noticia.contenido}</p>
       {/* Aquí puedes agregar más contenido de la noticia, si existe */}
     </div>
   );

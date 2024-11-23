@@ -1,31 +1,60 @@
-"use client";
-
+import React, { useState } from "react";
 import { useRouter } from "next/navigation";
 
-export default function RunScrapers({ onRunScrapers, loading, message }) {
+export default function RunScrapers() {
+  const [loading, setLoading] = useState(false); // Estado local
+  const [message, setMessage] = useState(""); // Estado local
   const router = useRouter();
 
+  const runScrapers = async () => {
+    setLoading(true);
+    setMessage("");
+    try {
+      const response = await fetch("/api/run-scrapers", { method: "POST" });
+      const data = await response.json();
+      setMessage(data.message || "Scrapers ejecutados con éxito.");
+    } catch (error) {
+      setMessage("Error al ejecutar los scrapers.");
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const consolidateNews = async () => {
+    setLoading(true);
+    setMessage("");
+    try {
+      const response = await fetch("/api/consolidate-news", { method: "POST" });
+      const data = await response.json();
+      setMessage(data.message || "Consolidación completada con éxito.");
+    } catch (error) {
+      setMessage("Error al consolidar noticias.");
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
-    <div className="max-w-md mx-auto p-6 bg-white shadow-md rounded-lg">
-      <h2 className="text-2xl font-bold mb-4">Ejecutar Scrapers</h2>
+    <div className="p-6">
+      <h1 className="text-2xl font-bold mb-4">
+        Ejecutar Scrapers y Consolidar Noticias
+      </h1>
       <button
-        onClick={onRunScrapers}
+        onClick={runScrapers}
+        className="bg-blue-500 text-white px-4 py-2 rounded mb-4 disabled:opacity-50"
         disabled={loading}
-        className={`w-full px-4 py-2 font-semibold text-white rounded-lg ${
-          loading ? "bg-gray-400" : "bg-blue-500 hover:bg-blue-600"
-        }`}
       >
-        {loading ? "Ejecutando..." : "Correr Scrapers"}
+        {loading ? "Ejecutando scrapers..." : "Ejecutar Scrapers"}
       </button>
-      {message && (
-        <p className="mt-4 text-center text-sm text-gray-700">{message}</p>
-      )}
+      <br />
       <button
-        onClick={() => router.push("/")}
-        className="w-full mt-4 px-4 py-2 font-semibold text-white bg-gray-500 rounded-lg hover:bg-gray-600"
+        onClick={consolidateNews}
+        className="bg-green-500 text-white px-4 py-2 rounded disabled:opacity-50"
+        disabled={loading}
       >
-        Volver a la página principal
+        {loading ? "Consolidando noticias..." : "Consolidar Noticias"}
       </button>
+      <p className="mt-4 text-gray-700">{message}</p>
     </div>
   );
 }

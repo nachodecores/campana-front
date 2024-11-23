@@ -1,19 +1,36 @@
 import React from "react";
 import { useRouter } from "next/navigation";
 
-export default function NewsCard({ id, titulo, version_corta }) {
+export default function NewsCard({ id, titulo, contenido, styles }) {
   const router = useRouter();
 
   return (
     <div
       onClick={() => router.push(`/news/${id}`)}
-      className="bg-white p-4 shadow-md rounded-lg h-[10rem] cursor-pointer"
+      className={`bg-white p-4 shadow-md rounded-lg h-[10rem] cursor-pointer ${
+        styles?.text || "text-gray-800"
+      }`}
     >
-      <h2 className="text-xl font-semibold mb-2 overflow-hidden whitespace-nowrap text-ellipsis">
+      <h2
+        className={`text-xl font-semibold mb-2 overflow-hidden whitespace-nowrap text-ellipsis ${
+          styles?.text || "text-gray-800"
+        }`}
+      >
         {titulo}
       </h2>
+      <p
+        className={`${
+          styles?.text || "text-gray-800"
+        } overflow-hidden whitespace-nowrap text-ellipsis`}
+      >
+        {contenido}
+      </p>
+      {/* Elementos de depuración */}
       <p className="text-gray-600 overflow-hidden whitespace-nowrap text-ellipsis">
-        {version_corta}
+        {styles?.text || "No styles.text found"}
+      </p>
+      <p className="text-gray-600 overflow-hidden whitespace-nowrap text-ellipsis">
+        {JSON.stringify(styles) || "No styles found"}
       </p>
     </div>
   );

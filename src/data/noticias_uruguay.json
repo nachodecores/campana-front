@@ -1,142 +1,142 @@
 [
-    {
-        "titulo": "Uruguay avanza en energía renovable",
-        "nivel_de_relevancia": "alta",
-        "version_corta": "Uruguay lidera en energía renovable en América Latina.",
-        "version_larga": "Uruguay ha hecho avances significativos en energía renovable, especialmente en energía eólica y solar, consolidándose como un líder en la región.",
-        "categoria": "Economía"
-    },
-    {
-        "titulo": "Nuevas políticas de vivienda en Montevideo",
-        "nivel_de_relevancia": "media",
-        "version_corta": "La Intendencia lanza políticas para mejorar la vivienda.",
-        "version_larga": "La Intendencia de Montevideo ha lanzado un conjunto de políticas para mejorar el acceso a viviendas dignas y asequibles en la capital del país.",
-        "categoria": "Política"
-    },
-    {
-        "titulo": "Selección de fútbol de Uruguay se prepara para el Mundial",
-        "nivel_de_relevancia": "alta",
-        "version_corta": "Uruguay se prepara con entusiasmo para el próximo Mundial de Fútbol.",
-        "version_larga": "Con el Mundial de Fútbol a la vuelta de la esquina, la selección uruguaya intensifica su preparación con entrenamientos y partidos amistosos.",
-        "categoria": "Deportes"
-    },
-    {
-        "titulo": "Aumento en las exportaciones agrícolas",
-        "nivel_de_relevancia": "alta",
-        "version_corta": "Las exportaciones agrícolas uruguayas crecen a un ritmo notable.",
-        "version_larga": "Uruguay ha visto un aumento significativo en sus exportaciones agrícolas, impulsado principalmente por la soja y la carne vacuna.",
-        "categoria": "Economía"
-    },
-    {
-        "titulo": "Lanzamiento de un nuevo centro cultural en Montevideo",
-        "nivel_de_relevancia": "media",
-        "version_corta": "Se inaugura un centro cultural en el corazón de Montevideo.",
-        "version_larga": "El nuevo centro cultural en Montevideo promete ser un espacio clave para la expresión artística y la cultura uruguaya, ofreciendo actividades y exposiciones para todo público.",
-        "categoria": "Cultura"
-    },
-    {
-        "titulo": "Uruguay y Brasil fortalecen acuerdos comerciales",
-        "nivel_de_relevancia": "alta",
-        "version_corta": "Uruguay y Brasil acuerdan fortalecer sus lazos comerciales.",
-        "version_larga": "Los gobiernos de Uruguay y Brasil han firmado nuevos acuerdos para promover el comercio y la cooperación económica, beneficiando a ambos países.",
-        "categoria": "Política"
-    },
-    {
-        "titulo": "Aumento en el turismo en Punta del Este",
-        "nivel_de_relevancia": "alta",
-        "version_corta": "Punta del Este reporta un aumento en la cantidad de turistas.",
-        "version_larga": "El famoso balneario uruguayo Punta del Este ha visto un notable aumento en el número de visitantes, lo cual es una buena noticia para la industria del turismo.",
-        "categoria": "Turismo"
-    },
-    {
-        "titulo": "Gobierno lanza campaña de reciclaje en escuelas",
-        "nivel_de_relevancia": "media",
-        "version_corta": "Nueva campaña de reciclaje en escuelas uruguayas.",
-        "version_larga": "El gobierno uruguayo ha lanzado una campaña de reciclaje en las escuelas con el objetivo de educar a los niños sobre la importancia del cuidado ambiental.",
-        "categoria": "Educación"
-    },
-    {
-        "titulo": "Sistema de salud pública recibe fondos adicionales",
-        "nivel_de_relevancia": "alta",
-        "version_corta": "El sistema de salud pública en Uruguay recibe más fondos.",
-        "version_larga": "El gobierno ha destinado fondos adicionales para mejorar el sistema de salud pública en Uruguay, fortaleciendo hospitales y servicios médicos en el país.",
-        "categoria": "Salud"
-    },
-    {
-        "titulo": "Uruguay y Argentina trabajan en la protección del Río de la Plata",
-        "nivel_de_relevancia": "media",
-        "version_corta": "Colaboración entre Uruguay y Argentina para proteger el Río de la Plata.",
-        "version_larga": "Los gobiernos de Uruguay y Argentina han unido fuerzas para proteger el ecosistema del Río de la Plata, adoptando medidas de conservación conjuntas.",
-        "categoria": "Medio Ambiente"
-    },
-    {
-        "titulo": "Nuevas rutas de transporte público en Montevideo",
-        "nivel_de_relevancia": "baja",
-        "version_corta": "Montevideo mejora su sistema de transporte público.",
-        "version_larga": "La ciudad de Montevideo ha implementado nuevas rutas de transporte público para facilitar el acceso a áreas suburbanas.",
-        "categoria": "Transporte"
-    },
-    {
-        "titulo": "Iniciativa para fomentar la lectura en Uruguay",
-        "nivel_de_relevancia": "media",
-        "version_corta": "Campaña nacional para promover la lectura en jóvenes.",
-        "version_larga": "El Ministerio de Educación ha lanzado una iniciativa para fomentar la lectura en la juventud uruguaya, con programas en bibliotecas y escuelas.",
-        "categoria": "Cultura"
-    },
-    {
-        "titulo": "Economía de Uruguay muestra signos de recuperación",
-        "nivel_de_relevancia": "alta",
-        "version_corta": "La economía de Uruguay se recupera tras la pandemia.",
-        "version_larga": "Uruguay está experimentando una recuperación económica, impulsada por sectores clave como el turismo y la exportación agrícola.",
-        "categoria": "Economía"
-    },
-    {
-        "titulo": "Uruguay lanza proyecto de energías renovables",
-        "nivel_de_relevancia": "media",
-        "version_corta": "Nuevo proyecto en energías renovables en Uruguay.",
-        "version_larga": "Uruguay ha lanzado un proyecto ambicioso para expandir su infraestructura de energías renovables, beneficiando a la economía y el medio ambiente.",
-        "categoria": "Medio Ambiente"
-    },
-    {
-        "titulo": "Inauguración de nuevo hospital en Maldonado",
-        "nivel_de_relevancia": "alta",
-        "version_corta": "Se inaugura un nuevo hospital en Maldonado.",
-        "version_larga": "El nuevo hospital en Maldonado representa una mejora significativa en la atención médica en la región y servirá a miles de uruguayos.",
-        "categoria": "Salud"
-    },
-    {
-        "titulo": "Incremento en la producción de vinos en Uruguay",
-        "nivel_de_relevancia": "media",
-        "version_corta": "La producción de vinos uruguayos alcanza nuevos niveles.",
-        "version_larga": "La industria vitivinícola uruguaya está en auge, con un aumento en la producción y exportación de vinos de alta calidad.",
-        "categoria": "Economía"
-    },
-    {
-        "titulo": "Uruguay adopta nuevas medidas contra el cambio climático",
-        "nivel_de_relevancia": "alta",
-        "version_corta": "Medidas reforzadas para combatir el cambio climático en Uruguay.",
-        "version_larga": "Uruguay ha reforzado sus políticas contra el cambio climático, implementando regulaciones y proyectos de sostenibilidad.",
-        "categoria": "Medio Ambiente"
-    },
-    {
-        "titulo": "Aumento en las exportaciones de carne uruguaya",
-        "nivel_de_relevancia": "alta",
-        "version_corta": "Las exportaciones de carne uruguaya alcanzan cifras récord.",
-        "version_larga": "Uruguay ha logrado cifras récord en las exportaciones de carne, consolidándose como uno de los principales exportadores en América Latina.",
-        "categoria": "Economía"
-    },
-    {
-        "titulo": "Uruguay y Chile firman acuerdos de cooperación científica",
-        "nivel_de_relevancia": "media",
-        "version_corta": "Acuerdos científicos entre Uruguay y Chile.",
-        "version_larga": "Uruguay y Chile han firmado acuerdos de cooperación en investigación científica para avanzar en áreas de interés común.",
-        "categoria": "Ciencia"
-    },
-    {
-        "titulo": "Nuevas políticas de educación inclusiva en Uruguay",
-        "nivel_de_relevancia": "alta",
-        "version_corta": "Uruguay implementa políticas para educación inclusiva.",
-        "version_larga": "El Ministerio de Educación de Uruguay ha implementado políticas para promover la inclusión en el sistema educativo, asegurando oportunidades para todos.",
-        "categoria": "Educación"
-    }
+  {
+    "titulo": "Uruguay avanza en energía renovable",
+    "nivel_de_relevancia": "alta",
+    "version_corta": "Uruguay lidera en energía renovable en América Latina.",
+    "contenido": "Uruguay ha hecho avances significativos en energía renovable, especialmente en energía eólica y solar, consolidándose como un líder en la región.",
+    "categoria": "Economía"
+  },
+  {
+    "titulo": "Nuevas políticas de vivienda en Montevideo",
+    "nivel_de_relevancia": "media",
+    "version_corta": "La Intendencia lanza políticas para mejorar la vivienda.",
+    "contenido": "La Intendencia de Montevideo ha lanzado un conjunto de políticas para mejorar el acceso a viviendas dignas y asequibles en la capital del país.",
+    "categoria": "Política"
+  },
+  {
+    "titulo": "Selección de fútbol de Uruguay se prepara para el Mundial",
+    "nivel_de_relevancia": "alta",
+    "version_corta": "Uruguay se prepara con entusiasmo para el próximo Mundial de Fútbol.",
+    "contenido": "Con el Mundial de Fútbol a la vuelta de la esquina, la selección uruguaya intensifica su preparación con entrenamientos y partidos amistosos.",
+    "categoria": "Deportes"
+  },
+  {
+    "titulo": "Aumento en las exportaciones agrícolas",
+    "nivel_de_relevancia": "alta",
+    "version_corta": "Las exportaciones agrícolas uruguayas crecen a un ritmo notable.",
+    "contenido": "Uruguay ha visto un aumento significativo en sus exportaciones agrícolas, impulsado principalmente por la soja y la carne vacuna.",
+    "categoria": "Economía"
+  },
+  {
+    "titulo": "Lanzamiento de un nuevo centro cultural en Montevideo",
+    "nivel_de_relevancia": "media",
+    "version_corta": "Se inaugura un centro cultural en el corazón de Montevideo.",
+    "contenido": "El nuevo centro cultural en Montevideo promete ser un espacio clave para la expresión artística y la cultura uruguaya, ofreciendo actividades y exposiciones para todo público.",
+    "categoria": "Cultura"
+  },
+  {
+    "titulo": "Uruguay y Brasil fortalecen acuerdos comerciales",
+    "nivel_de_relevancia": "alta",
+    "version_corta": "Uruguay y Brasil acuerdan fortalecer sus lazos comerciales.",
+    "contenido": "Los gobiernos de Uruguay y Brasil han firmado nuevos acuerdos para promover el comercio y la cooperación económica, beneficiando a ambos países.",
+    "categoria": "Política"
+  },
+  {
+    "titulo": "Aumento en el turismo en Punta del Este",
+    "nivel_de_relevancia": "alta",
+    "version_corta": "Punta del Este reporta un aumento en la cantidad de turistas.",
+    "contenido": "El famoso balneario uruguayo Punta del Este ha visto un notable aumento en el número de visitantes, lo cual es una buena noticia para la industria del turismo.",
+    "categoria": "Turismo"
+  },
+  {
+    "titulo": "Gobierno lanza campaña de reciclaje en escuelas",
+    "nivel_de_relevancia": "media",
+    "version_corta": "Nueva campaña de reciclaje en escuelas uruguayas.",
+    "contenido": "El gobierno uruguayo ha lanzado una campaña de reciclaje en las escuelas con el objetivo de educar a los niños sobre la importancia del cuidado ambiental.",
+    "categoria": "Educación"
+  },
+  {
+    "titulo": "Sistema de salud pública recibe fondos adicionales",
+    "nivel_de_relevancia": "alta",
+    "version_corta": "El sistema de salud pública en Uruguay recibe más fondos.",
+    "contenido": "El gobierno ha destinado fondos adicionales para mejorar el sistema de salud pública en Uruguay, fortaleciendo hospitales y servicios médicos en el país.",
+    "categoria": "Salud"
+  },
+  {
+    "titulo": "Uruguay y Argentina trabajan en la protección del Río de la Plata",
+    "nivel_de_relevancia": "media",
+    "version_corta": "Colaboración entre Uruguay y Argentina para proteger el Río de la Plata.",
+    "contenido": "Los gobiernos de Uruguay y Argentina han unido fuerzas para proteger el ecosistema del Río de la Plata, adoptando medidas de conservación conjuntas.",
+    "categoria": "Medio Ambiente"
+  },
+  {
+    "titulo": "Nuevas rutas de transporte público en Montevideo",
+    "nivel_de_relevancia": "baja",
+    "version_corta": "Montevideo mejora su sistema de transporte público.",
+    "contenido": "La ciudad de Montevideo ha implementado nuevas rutas de transporte público para facilitar el acceso a áreas suburbanas.",
+    "categoria": "Transporte"
+  },
+  {
+    "titulo": "Iniciativa para fomentar la lectura en Uruguay",
+    "nivel_de_relevancia": "media",
+    "version_corta": "Campaña nacional para promover la lectura en jóvenes.",
+    "contenido": "El Ministerio de Educación ha lanzado una iniciativa para fomentar la lectura en la juventud uruguaya, con programas en bibliotecas y escuelas.",
+    "categoria": "Cultura"
+  },
+  {
+    "titulo": "Economía de Uruguay muestra signos de recuperación",
+    "nivel_de_relevancia": "alta",
+    "version_corta": "La economía de Uruguay se recupera tras la pandemia.",
+    "contenido": "Uruguay está experimentando una recuperación económica, impulsada por sectores clave como el turismo y la exportación agrícola.",
+    "categoria": "Economía"
+  },
+  {
+    "titulo": "Uruguay lanza proyecto de energías renovables",
+    "nivel_de_relevancia": "media",
+    "version_corta": "Nuevo proyecto en energías renovables en Uruguay.",
+    "contenido": "Uruguay ha lanzado un proyecto ambicioso para expandir su infraestructura de energías renovables, beneficiando a la economía y el medio ambiente.",
+    "categoria": "Medio Ambiente"
+  },
+  {
+    "titulo": "Inauguración de nuevo hospital en Maldonado",
+    "nivel_de_relevancia": "alta",
+    "version_corta": "Se inaugura un nuevo hospital en Maldonado.",
+    "contenido": "El nuevo hospital en Maldonado representa una mejora significativa en la atención médica en la región y servirá a miles de uruguayos.",
+    "categoria": "Salud"
+  },
+  {
+    "titulo": "Incremento en la producción de vinos en Uruguay",
+    "nivel_de_relevancia": "media",
+    "version_corta": "La producción de vinos uruguayos alcanza nuevos niveles.",
+    "contenido": "La industria vitivinícola uruguaya está en auge, con un aumento en la producción y exportación de vinos de alta calidad.",
+    "categoria": "Economía"
+  },
+  {
+    "titulo": "Uruguay adopta nuevas medidas contra el cambio climático",
+    "nivel_de_relevancia": "alta",
+    "version_corta": "Medidas reforzadas para combatir el cambio climático en Uruguay.",
+    "contenido": "Uruguay ha reforzado sus políticas contra el cambio climático, implementando regulaciones y proyectos de sostenibilidad.",
+    "categoria": "Medio Ambiente"
+  },
+  {
+    "titulo": "Aumento en las exportaciones de carne uruguaya",
+    "nivel_de_relevancia": "alta",
+    "version_corta": "Las exportaciones de carne uruguaya alcanzan cifras récord.",
+    "contenido": "Uruguay ha logrado cifras récord en las exportaciones de carne, consolidándose como uno de los principales exportadores en América Latina.",
+    "categoria": "Economía"
+  },
+  {
+    "titulo": "Uruguay y Chile firman acuerdos de cooperación científica",
+    "nivel_de_relevancia": "media",
+    "version_corta": "Acuerdos científicos entre Uruguay y Chile.",
+    "contenido": "Uruguay y Chile han firmado acuerdos de cooperación en investigación científica para avanzar en áreas de interés común.",
+    "categoria": "Ciencia"
+  },
+  {
+    "titulo": "Nuevas políticas de educación inclusiva en Uruguay",
+    "nivel_de_relevancia": "alta",
+    "version_corta": "Uruguay implementa políticas para educación inclusiva.",
+    "contenido": "El Ministerio de Educación de Uruguay ha implementado políticas para promover la inclusión en el sistema educativo, asegurando oportunidades para todos.",
+    "categoria": "Educación"
+  }
 ]
