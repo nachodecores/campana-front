@@ -40,6 +40,7 @@ export default function ControlPanel() {
     try {
       const response = await fetch("/api/populate-news", { method: "POST" });
       const data = await response.json();
+      console.log(data);
       setMessage(data.message || "Base de datos poblada con éxito.");
     } catch (error) {
       setMessage("Error al poblar la base de datos.");
