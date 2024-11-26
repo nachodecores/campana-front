@@ -2,8 +2,19 @@ const fs = require("fs");
 const path = require("path");
 
 function consolidateJsonFiles() {
-  const inputDirectory = path.join(__dirname, "output");
-  const outputFilePath = path.join(inputDirectory, "consolidated.json");
+  // Usar process.cwd() para obtener el directorio raíz del proyecto
+  const inputDirectory = path.join(process.cwd(), "src/scrapers/output");
+  const timestamp = new Date().toISOString().replace(/[:.]/g, "-");
+  const outputFilePath = path.join(
+    inputDirectory,
+    `consolidated-${timestamp}.json`
+  );
+
+  // Validar que el directorio de entrada exista
+  if (!fs.existsSync(inputDirectory)) {
+    console.error(`El directorio de entrada no existe: ${inputDirectory}`);
+    return;
+  }
 
   // Leer todos los archivos JSON en el directorio de salida
   const files = fs

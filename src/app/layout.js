@@ -13,7 +13,7 @@ const geistMono = localFont({
 });
 
 export const metadata = {
-  title: "Campana",
+  title: "Campana | todas las campanas en una",
   description: "todas las campanas",
   icons: {
     icon: "/favicon.ico",

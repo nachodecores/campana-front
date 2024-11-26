@@ -8,7 +8,7 @@ export default function Footer() {
         href="/run-scrapers"
         className="text-sm font-medium text-gray-700 hover:text-gray-900"
       >
-        Ejecutar Scrapers
+        Panel de Control
       </a>
     </footer>
   );

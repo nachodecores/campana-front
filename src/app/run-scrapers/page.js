@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import RunScrapers from "@/components/RunScrapers";
+import ControlPanel from "@/components/ControlPanel";
 
 export default function RunScrapersPage() {
   const [loading, setLoading] = useState(false);
@@ -30,7 +30,7 @@ export default function RunScrapersPage() {
   };
 
   return (
-    <RunScrapers
+    <ControlPanel
       onRunScrapers={handleRunScrapers}
       loading={loading}
       message={message}
