@@ -3,7 +3,6 @@ import { useRouter } from "next/navigation";
 
 export default function NewsCard({ id, titulo, contenido, categoria, styles }) {
   const router = useRouter();
-  console.log(styles.text);
   return (
     <div
       onClick={() => router.push(`/news/${id}`)}
