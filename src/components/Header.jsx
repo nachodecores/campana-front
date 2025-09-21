@@ -24,7 +24,7 @@ export default function Header() {
       <div className="flex items-center justify-between max-w-6xl mx-auto px-6">
         <img
           src={
-            isScrolled ? "logo_campana_claro.svg" : "/logo_campana_oscuro.svg"
+            isScrolled ? "/logo_campana_claro.svg" : "/logo_campana_oscuro.svg"
           }
           alt="Logo"
           className={`transition-all duration-500 ${

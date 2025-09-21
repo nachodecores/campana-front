@@ -36,7 +36,6 @@ export default function Home() {
         {noticias.map((noticia) => {
           const normalizedCategory = normalizeCategory(noticia.categoria);
           const styles = categoryStyles[normalizedCategory];
-          console.log(styles);
 
           return (
             <NewsCard

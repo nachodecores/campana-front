@@ -88,7 +88,7 @@ const categoryStyles = {
     padding: "p-4",
     rounded: "rounded-md",
     shadow: "shadow-sm",
-  },
+  }
 
   // Agrega más categorías según sea necesario...
 };

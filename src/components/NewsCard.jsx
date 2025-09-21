@@ -24,10 +24,6 @@ export default function NewsCard({ id, titulo, contenido, categoria, styles }) {
       >
         {contenido}
       </p>
-      {/* Elementos de depuración */}
-      <p className="text-gray-600 overflow-hidden whitespace-nowrap text-ellipsis">
-        {styles?.text || "No styles.text found"}
-      </p>
       <p className="text-gray-600 overflow-hidden whitespace-nowrap text-ellipsis">
         {categoria}
       </p>
