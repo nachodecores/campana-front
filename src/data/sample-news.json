@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1,
+    "titulo": "Uruguay anuncia nuevas medidas económicas",
+    "contenido": "El gobierno uruguayo presentó hoy un paquete de medidas económicas destinadas a estimular el crecimiento y reducir la inflación. Las medidas incluyen incentivos fiscales para pequeñas y medianas empresas, así como programas de apoyo para sectores afectados por la pandemia.",
+    "categoria": "economia",
+    "fuente": "Montevideo Portal",
+    "fecha": "2024-01-15",
+    "url": "https://www.montevideo.com.uy/noticia1"
+  },
+  {
+    "id": 2,
+    "titulo": "Nuevo centro cultural en el barrio Sur",
+    "contenido": "Se inauguró oficialmente el nuevo centro cultural en el barrio Sur de Montevideo. El espacio contará con salas de exposiciones, talleres artísticos y un auditorio para 200 personas. La inversión superó los 2 millones de dólares.",
+    "categoria": "cultura",
+    "fuente": "LR21",
+    "fecha": "2024-01-14",
+    "url": "https://www.lr21.com.uy/noticia2"
+  },
+  {
+    "id": 3,
+    "titulo": "Selección uruguaya se prepara para eliminatorias",
+    "contenido": "La selección uruguaya de fútbol comenzó su preparación para las próximas eliminatorias mundialistas. El técnico Marcelo Bielsa convocó a 23 jugadores para el microciclo de entrenamientos que se realizará en el Complejo Celeste.",
+    "categoria": "deportes",
+    "fuente": "El País",
+    "fecha": "2024-01-13",
+    "url": "https://www.elpais.com.uy/noticia3"
+  },
+  {
+    "id": 4,
+    "titulo": "Nuevas rutas de transporte público en Montevideo",
+    "contenido": "La Intendencia de Montevideo anunció la implementación de nuevas rutas de transporte público que conectarán los barrios más alejados con el centro de la ciudad. Las rutas comenzarán a funcionar el próximo mes y contarán con unidades eléctricas.",
+    "categoria": "transporte",
+    "fuente": "Montevideo Portal",
+    "fecha": "2024-01-12",
+    "url": "https://www.montevideo.com.uy/noticia4"
+  },
+  {
+    "id": 5,
+    "titulo": "Avances en investigación médica en Uruguay",
+    "contenido": "Investigadores uruguayos presentaron avances significativos en el tratamiento de enfermedades cardiovasculares. El estudio, realizado en colaboración con universidades internacionales, muestra resultados prometedores en la reducción de riesgos cardíacos.",
+    "categoria": "salud",
+    "fuente": "LR21",
+    "fecha": "2024-01-11",
+    "url": "https://www.lr21.com.uy/noticia5"
+  }
+]
